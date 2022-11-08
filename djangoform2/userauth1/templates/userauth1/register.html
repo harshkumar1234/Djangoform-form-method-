@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regiter</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+
+    }
+    #head{
+        background-color: black;
+        color: white;
+        font-size: 60px;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    #formbox{
+        margin-top: 20px ;
+        box-sizing: border-box;
+        border: 2px solid red;
+    }
+</style>
+<body>
+    <h1 id="head">this is Register Form</h1>
+    <div id="formbox">
+        <form action="" method="post" required="folse">
+            {% csrf_token %}
+        <!-- {{form.as_p}} {{form.errors|striptags}} -->
+
+    
+        <div><span >{{form.name.label_tag}}     {{form.name}}</span><br></div><br><br>
+       <div><span> {{form.username.label_tag}}   {{form.username}}</span><br></div><br><br>
+       <div><span> {{form.password.label_tag}}  {{form.password}}</span><br></div><br><br>
+       <div><span> {{form.email.label_tag}}  {{form.email}}</span><br></div><br><br>
+       <div><span> {{form.gender.label_tag}}  {{form.gender}}</span><br></div><br><br>
+       <div><span> {{form.dob.label_tag}}  {{form.dob}}</span><br></div><br><br>
+
+        <input type="submit" value="submit">
+        </form>
+    </div>
+</body>
+</html>
